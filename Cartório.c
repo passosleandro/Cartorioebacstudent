@@ -135,6 +135,8 @@ int main() //instrução principal
 		printf("\t1 - Registrar Nomes\n");
 		printf("\t2 - consultar Nomes\n");
 		printf("\t3 - Deletar Nomes\n\n\n");
+		printf("\t4 - Sair do sistema! \n\n");
+		
 		printf("Clique na Opção: ");//fim do menu.
 		
 		
@@ -156,6 +158,12 @@ int main() //instrução principal
 			case 3:
 				deletar();
 				break;
+				
+			case 4:
+				printf("Obrigado por utilizar CARTORIOEBAC.\n");
+				return 0;
+				break;
+				
 				
 			default:
 				printf("Opção i n d i s p o n í v e l  !!\n");
