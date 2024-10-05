@@ -123,63 +123,72 @@ int main() //instrução principal
 {
 	int opcao=0;// abre opção escolha		
 	int laco=1;
+	char senhadigitada[10]="a";
+	int comparacao;
+	
+	printf("##CARTÓRIO DA EBAC## \n\n");
+	printf("Login do administrador!\nDigite sua senha:");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)
+	{
 		
 		for(laco=1;laco=1;)// laço trabalha com variáveis, faça escolha entre variaveis abaixo....for precisa de variavel INT
-	{
-		system("cls");// comando de limpar a tela
-		
-		setlocale (LC_ALL, "portuguese"); 
-		
-		printf("##CARTÓRIO DA EBAC## \n\n"); 
-		printf("Escolha a opção desejada no menu: \n\n");
-		printf("\t1 - Registrar Nomes\n");
-		printf("\t2 - consultar Nomes\n");
-		printf("\t3 - Deletar Nomes\n\n\n");
-		printf("\t4 - Sair do sistema! \n\n");
-		
-		printf("Clique na Opção: ");//fim do menu.
-		
-		
-		scanf("%d", &opcao);// %D armazenar na variavel opcao pausar o programa aguardando decisao
-		system("cls");// comando limpar a tela 
-		
-		
-		switch(opcao)//escolha entre variaveis, fica mais limpo e organizado que o for.
 		{
+			system("cls");// comando de limpar a tela
+		
+			setlocale (LC_ALL, "portuguese"); 
+		
+			printf("##CARTÓRIO DA EBAC## \n\n"); 
+			printf("Escolha a opção desejada no menu: \n\n");
+			printf("\t1 - Registrar Nomes\n");
+			printf("\t2 - consultar Nomes\n");
+			printf("\t3 - Deletar Nomes\n");
+			printf("\t4 - Sair do sistema! \n\n");
+		
+			printf("Clique na Opção: ");//fim do menu.
 			
-			case 1:
+		
+			scanf("%d", &opcao);// %D armazenar na variavel opcao pausar o programa aguardando decisao
+			system("cls");// comando limpar a tela 
+		
+		
+			switch(opcao)//escolha entre variaveis, fica mais limpo e organizado que o for.
+			{
+			
+				case 1:
 				registro();	
-			    break;
+			   	break;
 			    
-			case 2:   
+				case 2:   
 				consulta();
 				break;
 			 	
-			case 3:
+				case 3:
 				deletar();
 				break;
 				
-			case 4:
+				case 4:
 				printf("Obrigado por utilizar CARTORIOEBAC.\n");
 				return 0;
 				break;
 				
 				
-			default:
+				default:
 				printf("Opção i n d i s p o n í v e l  !!\n");
 				system("pause");
 				break;	//fim da seleção
+			}
 		}
-		
+	}		
+	else
+	printf("senha INCORRETA!");
 	
-		
-		
-    }
 }
 
 		
 		
-
-	
-    
+		    
 	
