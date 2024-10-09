@@ -132,6 +132,7 @@ int main() //instrução principal
 	
 	comparacao = strcmp(senhadigitada, "admin");
 	
+	
 	if(comparacao == 0)
 	{
 		
